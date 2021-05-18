@@ -8,6 +8,7 @@
       :imgName='imgName'
       @publish='publish'
       @close='close'
+      width='500px'
     >
     </VDPhoto>
   </div>
@@ -19,7 +20,6 @@ export default {
     return {
       imgData: require('../public/demo1.gif'),
       imgName: '图片名',
-      width: '10px'
     }
   },
   methods: {
@@ -30,7 +30,8 @@ export default {
       this.$VDPhoto.show({
         imgData: require('../public/logo.png'),
         imgName: '图片名',
-        title: ''
+        title: '',
+        width: '500px'
       });
     },
     // 打印回调
