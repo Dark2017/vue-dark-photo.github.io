@@ -4,11 +4,7 @@
     <button @click="show2">调用方法打开</button>
     <VDPhoto 
       ref="VDPhoto"
-      :imgData='imgData'
-      :imgName='imgName'
-      @publish='publish'
-      @close='close'
-      width='500px'
+      :imgArr='imgArr'
     >
     </VDPhoto>
   </div>
@@ -19,6 +15,7 @@ export default {
   data() {
     return {
       imgData: require('../public/demo1.gif'),
+      imgArr: [require('../public/demo1.gif'), require('../public/logo.png')],
       imgName: '图片名',
     }
   },
@@ -33,15 +30,6 @@ export default {
         title: '',
         width: '500px'
       });
-    },
-    // 打印回调
-    publish(val) {
-      // do somethings ...
-      console.log(val,'--val--');
-    },
-    // 可以使用el-dialog的事件等...
-    close() {
-      console.log('close');
     }
   }
 }
